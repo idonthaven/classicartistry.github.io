@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Copyright-Free Photos</title>
+  <style>
+      body {
+    background-image: url('https://source.unsplash.com/random/1920x1080');
+    background-size: cover;
+  }
+    h1 {
+      text-align: center;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    .photo {
+      width: 30%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .photo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .photo h3 {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Copyright-Free Photos</h1>
+  <div class="photo">
+      <img src="https://th.bing.com/th/id/OIP.rsH1d3MGR1O4FX3X0vvBIwHaF7?pid=ImgDet&rs=1" alt="Photo 1">
+    </a>
+    <h3>Photo 1</h3>
+    <button class="download" onclick="downloadFile('https://th.bing.com/th/id/OIP.rsH1d3MGR1O4FX3X0vvBIwHaF7?pid=ImgDet&rs=1')">Download</button>
+  </div>
+  
+  <script>
+    function downloadFile(fileUrl) {
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.setAttribute('download', '');
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    }
+  </script>
