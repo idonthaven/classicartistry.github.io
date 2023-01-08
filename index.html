@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <script src="scripts.js"></script>
+<head>
+  <title>Music and Video Sharing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    form {
+      width: 50%;
+      margin: 0 auto;
+      text-align: left;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .upload-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .upload-form input[type="text"], .upload-form textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .upload-form input[type="submit"] {
+      width: 100%;
+      background-color: blue;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .upload-form input[type="submit"]:hover {
+      background-color: darkblue;
+    }
+    /* Navigation bar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      border: 1px solid black;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Music and Video Sharing</h1>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="videos.html">Videos</a>
+    <a href="music.html">Music</a>
+    <a href="photos.html">Pictures</a>
+    <a href="movies.html">Movies</a>
+  </div>
+  <!-- Embedded Videos -->
+  <h2>Featured Videos:</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/2Vv-BfVoq4g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <!-- Search Form -->
+  <form>
+    <h2>Search for music and videos:</h2>
+    <label for="query">Keywords:</label><br>
+    <input type="text" id="query" name="query"><br>
+    <input type="submit" value="Search">
+  </form> 
+  <h1 style="font-size: xx-large; text-align: left;">Send your own videos, musics, movies, photos:</h1>
+<form class="upload-form" action="https://formsubmit.co/gamerman90101122@gmail.com" method="post" enctype="multipart/form-data">
+  <label for="title">Title:</label><br>
+  <input type="text" id="title" name="title" required><br>
+  <label for="description" aria-required="true">Description:</label><br>
+  <textarea id="description" name="description" required></textarea><br>
+  <label for="fileToUpload" >Select files to upload:</label><br>
+  <input type="file" name="fileToUpload" id="fileToUpload" multiple required><br>
+  <input type="submit" value="Send" name="submit" required>
+</form>
+  <!-- Upload Form -->
+<h1 style="font-size: xx-large; text-align: left;">Send your Feddback:</h1>
+<form target="_blank" action="https://formsubmit.co/gamerman90101122@gmail.com" method="POST">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="feedback">Feedback:</label><br>
+  <textarea id="feedback" name="feedback" required></textarea><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+  
+</body>
+</html>
